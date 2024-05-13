@@ -40,7 +40,7 @@ export const LoginPage = () => {
         localStorage.removeItem('loginStatus')
     }
 
-    return <div className="App">
+    return <div className="App App-margin">
         <h2> ToDo App Login</h2>
         <label className="labelCls">User Name: </label>
         <input 

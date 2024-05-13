@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.App-margin {
+  margin-top: 200px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -37,5 +41,44 @@
 .btnCls {
   font-weight: bold;
   padding: 10px;
-  margin: 4px;
+  margin: 10px;
+}
+
+.show-heading-with-btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px;
+  margin-top: 25px;
+}
+
+.button-container {
+  position: fixed;
+  top: 10px; /* Adjust this value to change the distance from the top */
+  right: 20px; /* Adjust this value to change the distance from the right */
+}
+
+.scrollable-div {
+  width: 100%; /* Adjust width as needed */
+  height: 500px; /* Adjust height as needed */
+  overflow: auto; /* Enable scroll bar */
+  border: 1px solid #020202; /* Optional: add border for visibility */
+}
+
+
+table{
+  border-collapse: collapse;
+  border: 1px solid black;
+  background-color: white;
+}
+
+tbody, thead, th, tr, td {
+  border: 1px solid black;
+}
+
+th {
+  background-color: grey;
+}
+
+th, td {
+  padding: 8px;
 }
