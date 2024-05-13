@@ -10,8 +10,8 @@ export const TodoApp = () => {
 
     const objNavigate = useNavigate();
     const btnBack = () => {
-        objNavigate(-1);
         localStorage.removeItem('loginStatus');
+        objNavigate(AppRoutes.login);
     };
 
     const btnAddItem = () => {
