@@ -12,7 +12,7 @@ export const AddItem = () => {
     return <div className="App">
         <h2>Add Item to ToDo List</h2>
 
-        <label className="label-cls">Description</label>
+        <label className="labelCls">Description</label>
         <textarea 
             type="text" 
             id="desc" 
@@ -22,12 +22,12 @@ export const AddItem = () => {
             className="input-cls"></textarea>
         <br/>
         <br/>
-        <label className="label-cls">Date</label>
-        <input type="date" className="input-cls"></input>
+        <label className="labelCls">Date</label>
+        <input type="date" className="inputCls"></input>
 
         <br/>
         <br/>
-        <button className="btn-cls">Add Todo</button>
-        <button className="btn-cls" onClick={btnBack}>Go Back</button>
+        <button className="btnCls">Add Todo</button>
+        <button className="btnCls" onClick={btnBack}>Go Back</button>
     </div>
 };
