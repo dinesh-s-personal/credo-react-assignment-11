@@ -64,6 +64,15 @@
   border: 1px solid #020202; /* Optional: add border for visibility */
 }
 
+.errorBtn {
+  background-color: red;
+  color: white;
+  margin-left: 5px
+}
+
+.btnSpace {
+  margin-left: 5px;
+}
 
 table{
   border-collapse: collapse;

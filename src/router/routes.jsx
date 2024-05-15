@@ -1,5 +1,6 @@
 export const AppRoutes = {
     login: "/login",
     todoapp: "/todoApp",
-    additem: "/addItem"
+    additem: "/addItem",
+    edititem: "/editTodo/:id"
 };

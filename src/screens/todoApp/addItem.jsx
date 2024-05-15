@@ -6,30 +6,34 @@ import { AppRoutes } from "../../router/routes";
 export const AddItem = () => {
 
     const objNavigate = useNavigate();
+
     const [txtArea, setTextArea] = React.useState('');
+    const [todoDate, setTodoDate] = React.useState(new Date());
+    
     const updateTextArea = (e) => {
         setTextArea(e.target.value);
     }
 
     const btnBack = () => {
-        objNavigate(-1);
+        objNavigate(AppRoutes.todoapp);
     }
 
     const btnAddTodo = () => {
         axios.post('https://664189a13d66a67b34341c2e.mockapi.io/api/v1/todos', {
             "title": txtArea,
-            "date": "Mon May 14 2024 02:02:51 GMT+0530 (India Standard Time)",
+            "date": todoDate,
             "is_completed": false,
-            "created_at": "Mon May 13 2024 07:32:51 GMT+0530 (India Standard Time)",
-            "updated_at": "Mon May 13 2024 07:32:51 GMT+0530 (India Standard Time)"
+            "created_at": new Date().toString(),
+            "updated_at": new Date().toString(),
+            "completed_on": ''
           })
             .then((response) => {
-                alert('Data added successfully');
+                alert('Todo item added successfully');
                 objNavigate(AppRoutes.todoapp);
             })
             .catch((error) => {
                 console.log(error);
-                alert('Error while adding data! Check the error log.');
+                alert('Error while adding todo item! Check the console log.');
             })
             .finally()
     }
@@ -51,7 +55,7 @@ export const AddItem = () => {
         <br/>
         <br/>
         <label className="labelCls">Date</label>
-        <input type="date" className="inputCls"></input>
+        <input type="date" className="inputCls" value={todoDate} onChange={(e) => setTodoDate(e.target.value)}></input>
 
         <br/>
         <br/>

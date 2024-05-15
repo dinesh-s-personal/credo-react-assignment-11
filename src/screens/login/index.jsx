@@ -4,11 +4,11 @@ import { AppRoutes } from "../../router/routes";
 
 export const LoginPage = () => {
 
+    const objNavigate = useNavigate();    
+
     const [username, setUsername] = React.useState('');
     const [pwd, setPwd] = React.useState('');
     const [outputDtls, setOutput] = React.useState('');
-
-    const objNavigate = useNavigate();
 
     const handleUsernameChange = (e) => {
         setUsername(e.target.value);
