@@ -135,7 +135,11 @@ export const TodoApp = () => {
                                     <td>{new Date(item.created_at).toString()}</td>
                                     <td>{new Date(item.updated_at).toString()}</td>
                                     <td>
-                                        <button onClick={() => btnEditClick(item.id)}>Edit</button>
+                                        {
+                                            item.is_completed ? <button disabled>Edit</button>
+                                                : <button onClick={() => btnEditClick(item.id)}>Edit</button>
+                                        }
+                                        
                                         <button className="errorBtn" onClick={() => btnDeleteClick(item.id)}>Delete</button>
                                         <button className="btnSpace" onClick={() => btnMarkStatus(item.id, true, item.completed_on)}>Mark Completed</button>
                                         <button className="btnSpace" onClick={() => btnMarkStatus(item.id, false, null)}>Undo</button>

@@ -27,15 +27,15 @@ export const AddItem = () => {
             "updated_at": new Date().toString(),
             "completed_on": ''
           })
-            .then((response) => {
-                alert('Todo item added successfully');
-                objNavigate(AppRoutes.todoapp);
-            })
-            .catch((error) => {
-                console.log(error);
-                alert('Error while adding todo item! Check the console log.');
-            })
-            .finally()
+        .then((response) => {
+            alert('Todo item added successfully');
+            objNavigate(AppRoutes.todoapp);
+        })
+        .catch((error) => {
+            console.log(error);
+            alert('Error while adding todo item! Check the console log.');
+        })
+        .finally()
     }
 
     return <div className="App">
